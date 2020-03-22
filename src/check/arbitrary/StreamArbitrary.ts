@@ -6,6 +6,10 @@ import { Arbitrary } from './definition/Arbitrary';
 import { biasWrapper } from './definition/BiasedArbitraryWrapper';
 import { Shrinkable } from './definition/Shrinkable';
 
+/**
+ * @hidden
+ * @internal
+ */
 class StreamArbitrary<T> extends Arbitrary<Stream<T>> {
   constructor(readonly arb: Arbitrary<T>) {
     super();
